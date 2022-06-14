@@ -17,3 +17,6 @@ class ViewController: UIViewController {
 
 }
 
+class Victor {
+    var strong = 100
+}
