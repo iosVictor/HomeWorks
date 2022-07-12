@@ -21,16 +21,19 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         let firstButton = UIButton(frame: CGRect(x: 96, y: 250, width: 160, height: 64))
         firstButton.setTitle("Authorization", for: .normal)
+        firstButton.backgroundColor = .gray
         firstButton.addTarget(self, action: #selector(pressFirstButton), for: .touchUpInside)
         self.view.addSubview(firstButton)
         
         let secondButton = UIButton(frame: CGRect(x: 96, y: 330, width: 160, height: 64))
         secondButton.setTitle("second button", for: .normal)
+        secondButton.backgroundColor = .gray
         secondButton.addTarget(self, action: #selector(pressSecondButton), for: .touchUpInside)
         self.view.addSubview(secondButton)
         
         let thirdButton = UIButton(frame: CGRect(x: 96, y: 410, width: 160, height: 64))
         thirdButton.setTitle("third button", for: .normal)
+        thirdButton.backgroundColor = .gray
         thirdButton.addTarget(self, action: #selector(pressThirdButton), for: .touchUpInside)
         self.view.addSubview(thirdButton)
         
