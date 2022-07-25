@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebBro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yNr-tg-BtO">
+                                <rect key="frame" x="8" y="68" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-v0-7Fo">
+                                <rect key="frame" x="174" y="118" width="66" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Найти"/>
+                                <connections>
+                                    <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnc-tn-Vni"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spR-Pe-3tr">
+                                <rect key="frame" x="0.0" y="189" width="414" height="707"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HF-bN-NHq" userLabel="Forward">
+                                <rect key="frame" x="355.5" y="156" width="50.5" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="forward" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="forward" catalog="system"/>
+                                <connections>
+                                    <action selector="forwardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebn-YV-0C0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEj-8s-l1b" userLabel="Backward">
+                                <rect key="frame" x="8" y="156" width="51" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="forward" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="backward" catalog="system"/>
+                                <connections>
+                                    <action selector="backwardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hmf-FI-XWL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8HF-bN-NHq" secondAttribute="trailing" constant="8" id="3c5-ix-Aug"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yNr-tg-BtO" secondAttribute="trailing" constant="8" id="FnC-Eb-OW6"/>
+                            <constraint firstItem="yNr-tg-BtO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="N5I-J8-SL8"/>
+                            <constraint firstItem="spR-Pe-3tr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="R8q-Yo-3sh"/>
+                            <constraint firstItem="spR-Pe-3tr" firstAttribute="top" secondItem="VEW-v0-7Fo" secondAttribute="bottom" constant="40" id="ZiI-Kp-Ytq"/>
+                            <constraint firstItem="spR-Pe-3tr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="arB-fG-Qpl"/>
+                            <constraint firstItem="VEW-v0-7Fo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bCM-CS-4Rl"/>
+                            <constraint firstItem="8HF-bN-NHq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yEj-8s-l1b" secondAttribute="trailing" constant="8" symbolic="YES" id="bWs-0U-e9W"/>
+                            <constraint firstItem="yEj-8s-l1b" firstAttribute="top" secondItem="yNr-tg-BtO" secondAttribute="bottom" constant="54" id="eNh-RV-JPn"/>
+                            <constraint firstAttribute="bottom" secondItem="spR-Pe-3tr" secondAttribute="bottom" id="gtU-o8-Nsx"/>
+                            <constraint firstItem="yEj-8s-l1b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="jwm-lp-Ia7"/>
+                            <constraint firstItem="8HF-bN-NHq" firstAttribute="top" secondItem="yNr-tg-BtO" secondAttribute="bottom" constant="54" id="qxA-yy-XPo"/>
+                            <constraint firstItem="yNr-tg-BtO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="riq-cQ-PMf"/>
+                            <constraint firstItem="VEW-v0-7Fo" firstAttribute="top" secondItem="yNr-tg-BtO" secondAttribute="bottom" constant="16" id="rqM-5d-sAL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="yNr-tg-BtO" id="J9P-sK-sph"/>
+                        <outlet property="webView" destination="spR-Pe-3tr" id="XLA-yc-QG6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backward" catalog="system" width="128" height="79"/>
+        <image name="forward" catalog="system" width="128" height="79"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
