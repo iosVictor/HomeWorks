@@ -25,6 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         
         let moveBackground = SKAction.move(by: CGVector(dx: -1500, dy: 0), duration: 10)
+//        run(SKAction.repeatForever(moveBackground))
         
         backgroundNode.run(moveBackground)
       
