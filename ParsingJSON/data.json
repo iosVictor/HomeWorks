@@ -1,0 +1,57 @@
+{
+    "data": [
+        {
+            "title": "Race",
+            "character": [
+                "Human",
+                "Elf",
+                "Dark Elf",
+                "Orc",
+                "Dwarf"
+            ]
+        },
+        {
+            "title": "First Job Class for Human",
+            "character": [
+                "Warrior",
+                "Knight",
+                "Rogue",
+                "Wizard",
+                "Cleric"
+            ]
+        },
+        {
+            "title": "First Job Class for Elf",
+            "character": [
+                "Elven Knight",
+                "Elven Scout",
+                "Elven Wizard",
+                "Elven Oracle"
+            ]
+        },
+        {
+            "title": "First Job Class for Dark Elf",
+            "character": [
+                "Palus Knight",
+                "Assassin",
+                "Dark Wizard",
+                "Shillien Oracle"
+            ]
+        },
+        {
+            "title": "First Job Class for Orc",
+            "character": [
+                "Orc Raider",
+                "Monk",
+                "Orc Shaman"
+            ]
+        },
+        {
+            "title": "First Job Class for Dwarf",
+            "character": [
+                "Artisan",
+                "Scavenger"
+            ]
+        }
+    ]
+}
