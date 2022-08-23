@@ -22,6 +22,7 @@
 		ED4D1EF4289DBAE000F1562E /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D1EF3289DBAE000F1562E /* ListCell.swift */; };
 		ED4D1EF6289E3F5800F1562E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D1EF5289E3F5800F1562E /* DetailViewController.swift */; };
 		ED4D1EF8289E994500F1562E /* AddCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D1EF7289E994500F1562E /* AddCity.swift */; };
+		EDD1064928B575FC00E641E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDD1064828B575FC00E641E4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		ED4D1EF3289DBAE000F1562E /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		ED4D1EF5289E3F5800F1562E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		ED4D1EF7289E994500F1562E /* AddCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCity.swift; sourceTree = "<group>"; };
+		EDD1064828B575FC00E641E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				ED4D1ED0289C418700F1562E /* AppDelegate.swift */,
+				EDD1064828B575FC00E641E4 /* GoogleService-Info.plist */,
 				ED4D1ED2289C418700F1562E /* SceneDelegate.swift */,
 				ED4D1EE9289C888B00F1562E /* Constant.swift */,
 				ED4D1ED9289C418800F1562E /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 				ED4D1ECA289C418700F1562E /* Frameworks */,
 				ED4D1ECB289C418700F1562E /* Resources */,
 				ADF51CA3AB37EC21577D2F4F /* [CP] Embed Pods Frameworks */,
+				EDD1064A28B57AB700E641E4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -200,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4D1EDD289C418800F1562E /* LaunchScreen.storyboard in Resources */,
+				EDD1064928B575FC00E641E4 /* GoogleService-Info.plist in Resources */,
 				ED4D1EDA289C418800F1562E /* Assets.xcassets in Resources */,
 				ED4D1ED8289C418700F1562E /* Main.storyboard in Resources */,
 			);
@@ -246,6 +251,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherApp/Pods-WeatherApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		EDD1064A28B57AB700E641E4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "find dSYM_DIRECTORY -name \"*.dSYM\" | xargs -I \\{\\} $PODS_ROOT/FirebaseCrashlytics/upload-symbols -gsp /PATH/TO/GoogleService-Info.plist -p PLATFORM \\{\\}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -415,6 +437,7 @@
 				DEVELOPMENT_TEAM = A3UPK989FF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WeatherApp/Supporting files/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Нам необходимы Ваши данные!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -429,7 +452,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -444,6 +467,7 @@
 				DEVELOPMENT_TEAM = A3UPK989FF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WeatherApp/Supporting files/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Нам необходимы Ваши данные!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -458,7 +482,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

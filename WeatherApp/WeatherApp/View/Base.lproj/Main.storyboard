@@ -104,6 +104,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weatherImg" translatesAutoresizingMaskIntoConstraints="NO" id="LyA-vu-fE6">
+                                <rect key="frame" x="0.0" y="-10" width="414" height="906"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MHd-Kx-GNm" userLabel="Top_stack">
                                 <rect key="frame" x="127" y="128" width="160" height="314"/>
                                 <subviews>
@@ -261,7 +264,11 @@
                         <color key="backgroundColor" red="0.45490196350000001" green="0.74509805439999999" blue="0.91764706370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="MHd-Kx-GNm" firstAttribute="top" secondItem="IiF-1O-8Je" secondAttribute="top" constant="40" id="FLm-hR-HnC"/>
+                            <constraint firstItem="LyA-vu-fE6" firstAttribute="top" secondItem="IiF-1O-8Je" secondAttribute="top" constant="-98" id="Im7-rd-p6F"/>
+                            <constraint firstItem="LyA-vu-fE6" firstAttribute="leading" secondItem="IiF-1O-8Je" secondAttribute="leading" id="OMp-Yn-WEp"/>
                             <constraint firstItem="zXZ-pV-7k5" firstAttribute="leading" secondItem="IiF-1O-8Je" secondAttribute="leading" constant="16" id="Otd-se-ofA"/>
+                            <constraint firstItem="IiF-1O-8Je" firstAttribute="bottom" secondItem="LyA-vu-fE6" secondAttribute="bottom" constant="-34" id="Yj9-Wv-S1v"/>
+                            <constraint firstItem="IiF-1O-8Je" firstAttribute="trailing" secondItem="LyA-vu-fE6" secondAttribute="trailing" id="lzw-f1-53s"/>
                             <constraint firstItem="MHd-Kx-GNm" firstAttribute="centerX" secondItem="mOm-iJ-NQe" secondAttribute="centerX" id="uyc-jt-nwo"/>
                             <constraint firstItem="zXZ-pV-7k5" firstAttribute="top" secondItem="MHd-Kx-GNm" secondAttribute="bottom" constant="80" id="yTm-E2-CNv"/>
                         </constraints>
@@ -303,6 +310,7 @@
     </scenes>
     <resources>
         <image name="location.magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="weatherImg" width="719" height="1280"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
