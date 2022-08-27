@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a9T-Bq-5dw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -9,12 +9,76 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller Two-->
+        <scene sceneID="B0k-rA-nRG">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerTwo" id="a9T-Bq-5dw" customClass="ViewControllerTwo" customModule="DZ_18" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HTf-SH-CwK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGP-nc-SHN">
+                                <rect key="frame" x="32" y="556" width="350" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="qzZ-ZA-0jk"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SECRET">
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="30"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="36"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapSecret:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bjh-dk-tUc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Eu-y6-kjT">
+                                <rect key="frame" x="32" y="412" width="350" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="xCI-Hn-Lhh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="30"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="36"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapPressButton:" destination="a9T-Bq-5dw" eventType="touchUpInside" id="Gma-lz-xMZ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="A9e-F4-6fW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="439-GA-v0V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Eu-y6-kjT" firstAttribute="centerY" secondItem="HTf-SH-CwK" secondAttribute="centerY" id="EAy-h0-Vrx"/>
+                            <constraint firstItem="8Eu-y6-kjT" firstAttribute="centerX" secondItem="HTf-SH-CwK" secondAttribute="centerX" id="VFm-KX-9LP"/>
+                            <constraint firstItem="439-GA-v0V" firstAttribute="trailing" secondItem="tGP-nc-SHN" secondAttribute="trailing" constant="32" id="WDv-Y6-GJm"/>
+                            <constraint firstItem="8Eu-y6-kjT" firstAttribute="leading" secondItem="439-GA-v0V" secondAttribute="leading" constant="32" id="eUQ-kY-2fu"/>
+                            <constraint firstItem="tGP-nc-SHN" firstAttribute="top" secondItem="8Eu-y6-kjT" secondAttribute="bottom" constant="72" id="fMv-zW-eG8"/>
+                            <constraint firstItem="tGP-nc-SHN" firstAttribute="leading" secondItem="439-GA-v0V" secondAttribute="leading" constant="32" id="mkH-Iy-gWk"/>
+                            <constraint firstItem="439-GA-v0V" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tGP-nc-SHN" secondAttribute="trailing" symbolic="YES" id="pZo-AF-RZt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tpl-wR-ybc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rip-00-Bqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1779.7101449275365" y="69.642857142857139"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DZ_18" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iH4-pT-Vio">
@@ -72,13 +136,14 @@
                             <constraint firstItem="iH4-pT-Vio" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tRQ-Vp-dXw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZmA-ac-CEz"/>
                     <connections>
                         <outlet property="collectionView" destination="iH4-pT-Vio" id="GZ3-pK-wVc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="69.642857142857139"/>
+            <point key="canvasLocation" x="2613.04347826087" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>

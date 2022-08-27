@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED3E468728BA3F8800122CBC /* SwiftyKeychainKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED3E468628BA3F8800122CBC /* SwiftyKeychainKit */; };
+		ED3E468A28BA638C00122CBC /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = ED3E468928BA638C00122CBC /* SPIndicator */; };
 		ED7EB11328883E2B00DDAA1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7EB11228883E2B00DDAA1E /* AppDelegate.swift */; };
 		ED7EB11528883E2B00DDAA1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7EB11428883E2B00DDAA1E /* SceneDelegate.swift */; };
 		ED7EB11728883E2B00DDAA1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7EB11628883E2B00DDAA1E /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED3E468728BA3F8800122CBC /* SwiftyKeychainKit in Frameworks */,
+				ED3E468A28BA638C00122CBC /* SPIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +90,10 @@
 			dependencies = (
 			);
 			name = DZ_18;
+			packageProductDependencies = (
+				ED3E468628BA3F8800122CBC /* SwiftyKeychainKit */,
+				ED3E468928BA638C00122CBC /* SPIndicator */,
+			);
 			productName = DZ_18;
 			productReference = ED7EB10F28883E2B00DDAA1E /* DZ_18.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,10 @@
 				Base,
 			);
 			mainGroup = ED7EB10628883E2B00DDAA1E;
+			packageReferences = (
+				ED3E468528BA3F8800122CBC /* XCRemoteSwiftPackageReference "SwiftyKeychainKit" */,
+				ED3E468828BA638C00122CBC /* XCRemoteSwiftPackageReference "SPIndicator" */,
+			);
 			productRefGroup = ED7EB11028883E2B00DDAA1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,6 +374,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED3E468528BA3F8800122CBC /* XCRemoteSwiftPackageReference "SwiftyKeychainKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/andriyslyusar/SwiftyKeychainKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = "1.0.0-beta.2";
+			};
+		};
+		ED3E468828BA638C00122CBC /* XCRemoteSwiftPackageReference "SPIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPIndicator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED3E468628BA3F8800122CBC /* SwiftyKeychainKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED3E468528BA3F8800122CBC /* XCRemoteSwiftPackageReference "SwiftyKeychainKit" */;
+			productName = SwiftyKeychainKit;
+		};
+		ED3E468928BA638C00122CBC /* SPIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED3E468828BA638C00122CBC /* XCRemoteSwiftPackageReference "SPIndicator" */;
+			productName = SPIndicator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED7EB10728883E2B00DDAA1E /* Project object */;
 }

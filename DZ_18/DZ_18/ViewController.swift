@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SwiftyKeychainKit
+import SPIndicator
 
 class ViewController: UIViewController {
 
@@ -60,5 +62,47 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+
+class ViewControllerTwo: UIViewController {
+    
+    // MARK: - KeychainService
+    let keychain = Keychain(service: "com.arc.keychain")
+    
+    // MARK: - Keychain KEY
+    let accessTokenKey = KeychainKey<String>(key: "accessToken")
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .red
+    }
+    
+    func handleError(with message: String) {
+        let indicatorView = SPIndicatorView(title: "Error", message: "Access denied", preset: .error)
+        indicatorView.present(duration: 3.0, haptic: .error)
+    }
+    
+    @IBAction func didTapPressButton(_ sender: Any) {
+        if let token = try? keychain.get(accessTokenKey) {
+            if token != "naborsimvolov" {
+                handleError(with: "Invalid Data")
+                return
+            }
+            let vc = ViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            handleError(with: "Access denied")
+        }
+    }
+    
+    @IBAction func didTapSecret(_ sender: Any) {
+        do {
+            try keychain.set("naborsimvolov", for: accessTokenKey)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
