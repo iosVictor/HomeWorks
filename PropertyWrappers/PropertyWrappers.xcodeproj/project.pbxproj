@@ -15,6 +15,7 @@
 		EDD2B08928D7C4C2000BE069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD2B08728D7C4C2000BE069 /* LaunchScreen.storyboard */; };
 		EDD2B09128D7C4F1000BE069 /* Trimmed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2B09028D7C4F1000BE069 /* Trimmed.swift */; };
 		EDD2B09328D7D4A2000BE069 /* Capitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2B09228D7D4A2000BE069 /* Capitalized.swift */; };
+		EDD2B09528D9D2C6000BE069 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2B09428D9D2C6000BE069 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EDD2B08A28D7C4C2000BE069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDD2B09028D7C4F1000BE069 /* Trimmed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trimmed.swift; sourceTree = "<group>"; };
 		EDD2B09228D7D4A2000BE069 /* Capitalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capitalized.swift; sourceTree = "<group>"; };
+		EDD2B09428D9D2C6000BE069 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				EDD2B08028D7C4C1000BE069 /* ViewController.swift */,
 				EDD2B09028D7C4F1000BE069 /* Trimmed.swift */,
 				EDD2B09228D7D4A2000BE069 /* Capitalized.swift */,
+				EDD2B09428D9D2C6000BE069 /* Date.swift */,
 				EDD2B08228D7C4C1000BE069 /* Main.storyboard */,
 				EDD2B08528D7C4C2000BE069 /* Assets.xcassets */,
 				EDD2B08728D7C4C2000BE069 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD2B08128D7C4C1000BE069 /* ViewController.swift in Sources */,
+				EDD2B09528D9D2C6000BE069 /* Date.swift in Sources */,
 				EDD2B07D28D7C4C1000BE069 /* AppDelegate.swift in Sources */,
 				EDD2B09128D7C4F1000BE069 /* Trimmed.swift in Sources */,
 				EDD2B07F28D7C4C1000BE069 /* SceneDelegate.swift in Sources */,
