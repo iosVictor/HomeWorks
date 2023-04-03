@@ -8,7 +8,7 @@ __________________________________
 ![](https://github.com/iosVictor/HomeWorks/blob/main/BurgerButton.gif)
 __________________________________
 ### Calculator
-![](https://github.com/iosVictor/HomeWorks/blob/main/Calculator.gif
+![](https://github.com/iosVictor/HomeWorks/blob/main/Calculator.gif)
 __________________________________
 ### Callbaks
 ![](https://github.com/iosVictor/HomeWorks/blob/main/Callbaks.gif)
