@@ -1,5 +1,5 @@
 # HomeWorks
-## Study 'TeachMeSkills'
+## Study `TeachMeSkills`
 __________________________________
 ### Beer
 ![](https://github.com/iosVictor/HomeWorks/blob/main/Beer.gif)
